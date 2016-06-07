@@ -1,3 +1,4 @@
+using System;
 using System.Web.Http;
 using WebActivatorEx;
 using MyExpenses;
@@ -75,6 +76,8 @@ namespace MyExpenses
 
                         // Set this flag to omit descriptions for any actions decorated with the Obsolete attribute
                         //c.IgnoreObsoleteActions();
+                        c.IncludeXmlComments($"{AppDomain.CurrentDomain.BaseDirectory}\\bin\\MyExpenses.XML");
+                        c.DescribeAllEnumsAsStrings();
 
                         // Each operation be assigned one or more tags which are then used by consumers for various reasons.
                         // For example, the swagger-ui groups operations according to the first tag of each operation.
