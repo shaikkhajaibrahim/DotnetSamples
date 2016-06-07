@@ -13,6 +13,9 @@ namespace MyExpenses.Models
         public string ExternalAccessToken { get; set; }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class ChangePasswordBindingModel
     {
         [Required]
@@ -32,26 +35,44 @@ namespace MyExpenses.Models
         public string ConfirmPassword { get; set; }
     }
 
+    /// <summary>
+    /// External Binding Model
+    /// </summary>
     public class RegisterBindingModel
     {
+        /// <summary>
+        /// Email Id
+        /// </summary>
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
+        /// <summary>
+        /// Password
+        /// </summary>
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
 
+        /// <summary>
+        /// Confirm Password
+        /// </summary>
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
     }
 
+    /// <summary>
+    /// This class will be used to Register the External Accounts Using oAuth
+    /// </summary>
     public class RegisterExternalBindingModel
     {
+        /// <summary>
+        /// Email Id
+        /// </summary>
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }

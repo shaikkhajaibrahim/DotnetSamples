@@ -59,11 +59,11 @@ namespace MyExpenses
             //    appId: "",
             //    appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "167439471273-a7lf8gn9eaod128r0eb2oi8mvhsm9vgl.apps.googleusercontent.com",
+                ClientSecret = "3ewGuygp_-HCzI0dFqVRDUX3"
+            });
         }
     }
 }
